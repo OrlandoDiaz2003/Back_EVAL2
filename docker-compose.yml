@@ -1,0 +1,12 @@
+services:
+  backend:
+    build: .
+    container_name: backend_usuarios
+    restart: always
+    environment:
+      - DB_HOST=${DB_HOST}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_PORT=${DB_PORT}
+    ports:
+      - "${PORT}:3000"
